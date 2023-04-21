@@ -12,7 +12,7 @@
                     </div>
                     <div class="card-body">
 
-                        <img src="{{ url('public/storage/'.$film->image) }}" class="img-thumbnail" style="height: 156px;min-width: 100%;"><br>
+                        <img src="{{ Storage::url('upload/'.$film->image) }}" class="img-thumbnail" style="height: 156px;min-width: 100%;"><br>
 
                         @switch($film->censorship)
                             @case('0+')
