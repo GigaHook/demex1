@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cart_items', function (Blueprint $table) {
-            //
+            $table->foreignId('film_id')->references('id')->on('films')->onDelete('cascade');
         });
     }
 
